@@ -45,7 +45,7 @@ export default function Login() {
             await login(email, password);
             clearForm();
         } catch (error) {
-            setError("Error during login.", error.message);
+            setError(error.message);
             setPassword("");
         } finally {
             setPending(false);
