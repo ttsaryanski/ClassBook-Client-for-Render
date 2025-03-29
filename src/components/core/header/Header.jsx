@@ -168,8 +168,8 @@ export default function Header() {
                             </Link>
                             {user &&
                                 isDirector &&
-                                clss.length &&
-                                !isTeacher > 0 && (
+                                clss.length > 0 &&
+                                !isTeacher && (
                                     <ul className={styles.ul}>
                                         {clss
                                             .slice()
