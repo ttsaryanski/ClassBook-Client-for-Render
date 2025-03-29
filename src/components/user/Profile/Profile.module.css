@@ -1,0 +1,29 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    color: #369;
+}
+
+.headers {
+    border-bottom: 1px solid #369;
+}
+
+.content {
+    gap: 4em;
+}
+
+.btn_edit {
+    background-color: #369;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 0.3rem;
+    align-self: flex-start;
+    border: none;
+}
+
+.btn_edit:hover {
+    background-color: lightblue;
+    color: #369;
+}

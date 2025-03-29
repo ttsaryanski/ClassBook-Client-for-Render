@@ -1,0 +1,50 @@
+.edit .modall_edit {
+    position: relative;
+    box-shadow: 0 2px 8px rgba(51, 102, 153, 0.25);
+}
+
+.edit_user {
+    color: #369;
+}
+
+.headers {
+    border-bottom: 1px solid #369;
+}
+
+.edit .icon {
+    color: #369;
+}
+
+.form_group {
+    width: 100%;
+}
+
+.form {
+    font-size: 1.1em;
+}
+
+.form_row {
+    margin-bottom: 1.5rem;
+}
+
+.form .required::after {
+    content: '*';
+    color: red;
+    margin-left: 0.3rem;
+}
+
+.form .span {
+    color: #369;
+}
+
+.custom_file label {
+    color: #369;
+}
+
+.form_group.file input:hover {
+    cursor: pointer;
+}
+
+.custom_file_label::after {
+    color: #369;
+}

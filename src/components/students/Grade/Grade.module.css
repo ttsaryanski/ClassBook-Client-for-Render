@@ -1,0 +1,24 @@
+.h1 {
+    color: #369;
+    margin-bottom: 2rem;
+}
+
+.card_container {
+    border: 1px solid rgba(51, 102, 153, 0.404);
+    font-size: 18px;
+}
+
+.add_btn {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.card_container .tbody {
+    position: initial;
+}
+
+@media (max-width: 768px) {
+    .grade .grade_table {
+        width: 100%;
+    }
+}

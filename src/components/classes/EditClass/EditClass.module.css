@@ -1,0 +1,43 @@
+.edit .modall_edit {
+    position: relative;
+    box-shadow: 0 2px 8px rgba(51, 102, 153, 0.25);
+}
+
+.edit_class *,
+.edit_class .icon {
+    color: #369;
+}
+
+.edit_class button {
+    color: #fff;
+}
+
+.edit_class option {
+    color: rgb(10, 65, 120)
+}
+
+.edit_class .edit_btn {
+    background-color: #369;
+}
+
+.edit_class .cancel_btn {
+    color: #fff;
+}
+
+.form {
+    font-size: 1.1em;
+}
+
+.form_row {
+    margin-bottom: 1.5rem;
+}
+
+.form .required::after {
+    content: '*';
+    color: red;
+    margin-left: 0.3rem;
+}
+
+.form .span {
+    color: #369;
+}

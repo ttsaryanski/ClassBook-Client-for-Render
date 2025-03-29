@@ -1,0 +1,32 @@
+.page404 .page404_main {
+    background-color: transparent !important;
+    color: #369;
+}
+
+.logo404 {
+    color: #369;
+    font-size: 5em;
+}
+
+.p {
+    color: #369;
+}
+
+.button {
+    background-color: #369;
+    color: #fff;
+    display: inline-block;
+    padding: 0.2rem 1.4rem;
+    border-radius: 0.3rem;
+    font-size: 1.5em;
+}
+
+.page404 .link {
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    /* background-color: lightblue !important;
+    color: #369 !important; */
+}

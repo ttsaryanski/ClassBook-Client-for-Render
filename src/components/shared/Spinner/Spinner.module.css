@@ -1,0 +1,10 @@
+.spinner,
+.spinner_container {
+    position: relative;
+    top: auto;
+    left: 0;
+}
+
+.spinner .spinner_container .loading {
+    background: #369;
+}

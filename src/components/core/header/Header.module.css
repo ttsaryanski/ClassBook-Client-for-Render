@@ -1,0 +1,239 @@
+.header {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.status {
+    padding: 1em 0;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #369;
+    font-size: 0.8em;
+}
+
+.status_responsive {
+    display: none;
+}
+
+.header_wrapper {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    color: #369;
+    padding: 2rem 0 3rem;
+    border-bottom: 1px solid #369;
+}
+  
+.logo {
+    font-size: 1.5em;
+    color: #369;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo .media {
+    height: 4rem;
+    background-color: #369;
+    border-radius: 0.3em;
+    overflow: hidden;
+}
+
+.logo .media:hover {
+    transform: scale(1.1);
+}
+
+.logo .media .img {
+    width: auto;
+    height: 100%;
+}
+
+.logo .course {
+    font-weight: bold;
+}
+
+.role {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Nav styles */
+
+.nav {
+    z-index: 30;
+}
+
+.nav .ul {
+    display: flex;
+    gap: 1em;
+    font-size: 16px;
+}
+
+.nav .ul .list, 
+.nav .ul .list .link {
+    display: block;
+}
+
+.nav .ul .list {
+    position: relative;
+}
+
+.nav .ul .list:hover > .ul {
+    min-width: 20ch;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 0.5em;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    padding: 0.5em;
+    z-index: 40;
+}
+
+.nav .ul .last:hover > .ul {
+    left: auto;
+    right: 0;
+}
+
+.nav .ul .list .link {
+    padding: 0.7em 1.5em;
+    background: #369;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3em;
+}
+
+.link {
+    white-space: nowrap;
+}
+
+.nav .ul .list .link.button_link {
+    width: 100%;
+}
+
+.nav .ul .list:hover > .link,
+.nav .ul .list .link:hover {
+    background-color: lightblue;
+    color: #369;
+}
+
+.nav .ul .ul {
+    display: none;
+}
+
+/* .nav .ul .ul .list:hover > .ul {
+    left: initial;
+    right: 100%;
+    top: -0.5em;
+} */
+
+.burger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #369;
+}
+
+@media (max-width: 1000px) {
+    .nav .ul .list .link {
+        font-size: 12px;
+    }
+}
+  
+@media (max-width: 768px) {
+    .status {
+        display: none;
+    }
+
+    .status_responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.1em;
+        font-size: 0.5em;
+    }
+
+    .header {
+      /* padding: 0 5%; */
+      height: 4rem;
+      align-items: center;
+      padding-bottom: 1em;
+      /* border-bottom: none; */
+    }
+
+    .header .logo {
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .logo .course {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        background-color: #369;
+        color: #fff;
+        border-radius: 0.1em;
+        padding: 0.1rem 0.2rem;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        background: #f7f7f7;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .nav.open {
+        display: flex;
+        align-items: flex-end;
+        background-color: transparent;
+        box-shadow: none;
+        padding-right: 0.8em;
+        margin-top: 0.5em;
+    }
+
+    .nav .ul {
+        /* width: 20ch; */
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 0.5em;
+        background-color: #fff;
+        border-radius: 0.3em;
+    }
+
+    .nav .ul .list {
+        position: relative;
+    }
+    
+    .nav .ul .list:hover > .ul {
+        right: auto;
+        top: -8px;
+        left:-194%;
+    }
+}
