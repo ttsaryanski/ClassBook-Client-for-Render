@@ -41,6 +41,14 @@ export default function Help() {
                             an existing student record. They can then access
                             their personal gradebook.
                         </p>
+                        <p className="text-gray-600 mt-2">
+                            You have the option to log in as a student using "{" "}
+                            <span style={{ color: "red" }}>
+                                student@gmail.com
+                            </span>{" "}
+                            " with the password "{" "}
+                            <span style={{ color: "red" }}>student</span> "
+                        </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-6">
                             Teachers
@@ -55,6 +63,14 @@ export default function Help() {
                             their assigned classes and manage student grades
                             with comments.
                         </p>
+                        <p className="text-gray-600 mt-2">
+                            You have the option to log in as a teacher using "{" "}
+                            <span style={{ color: "red" }}>
+                                teacher@gmail.com
+                            </span>{" "}
+                            " with the password "{" "}
+                            <span style={{ color: "red" }}>teacher</span> "
+                        </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-6">
                             Director
@@ -66,6 +82,14 @@ export default function Help() {
                             </span>{" "}
                             ". They can add students, create and manage classes,
                             assign teachers, and modify student enrollment.
+                        </p>
+                        <p className="text-gray-600 mt-2">
+                            You have the option to log in as a director using "{" "}
+                            <span style={{ color: "red" }}>
+                                director@gmail.com
+                            </span>{" "}
+                            " with the password "{" "}
+                            <span style={{ color: "red" }}>director</span> "
                         </p>
                     </div>
                 </div>
