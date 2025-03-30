@@ -363,7 +363,7 @@ export default function EditProfile() {
                             </div>
                         </div>
 
-                        <div id="form-actions">
+                        <div id="form-actions" className={styles.actions}>
                             <button
                                 id="action-save"
                                 type="submit"
@@ -385,14 +385,14 @@ export default function EditProfile() {
 
                             <Link
                                 id="action-cancel"
-                                className="btn"
+                                className={`${styles.btn_cancel} btn`}
                                 to={"/auth/profile"}
                             >
                                 Cancel
                             </Link>
                         </div>
                     </form>
-                    <p className={styles.form}>
+                    <p className={styles.form_p}>
                         {" "}
                         All fields marked with
                         <span className={styles.required}></span> are required!

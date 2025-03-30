@@ -38,9 +38,9 @@ export default function ShowDeleteClass({ classId, onDelete, onClose }) {
     }, [classId, setError]);
 
     return (
-        <div className="overlay">
+        <div className={`${styles.del} overlay`}>
             <div className="backdrop" onClick={onClose}></div>
-            <div className="modall">
+            <div className={`${styles.modall_delete} modall`}>
                 <div className={`${styles.del_container} confirm-container`}>
                     <header className="headers">
                         <h2>

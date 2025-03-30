@@ -421,7 +421,7 @@ export default function EditClass() {
                             </div>
                         </div>
 
-                        <div id="form-actions">
+                        <div id="form-actions" className={styles.actions}>
                             <button
                                 id="action-save"
                                 type="submit"

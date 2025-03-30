@@ -375,7 +375,7 @@ export default function CreateClass() {
                             </div>
                         </div>
 
-                        <div id="form-actions">
+                        <div id="form-actions" className={styles.actions}>
                             <button
                                 id="action-save"
                                 type="submit"
@@ -403,7 +403,7 @@ export default function CreateClass() {
                             </Link>
                         </div>
                     </form>
-                    <p className={styles.form}>
+                    <p className={styles.form_p}>
                         {" "}
                         All fields marked with
                         <span className={styles.required}></span> are required!

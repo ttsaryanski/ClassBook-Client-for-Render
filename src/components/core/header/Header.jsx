@@ -208,6 +208,12 @@ export default function Header() {
                             </Link>
                         </li>
 
+                        <li className={styles.list}>
+                            <Link className={styles.link} to="/help">
+                                Help
+                            </Link>
+                        </li>
+
                         {isTeacher && (
                             <li className={styles.list}>
                                 <Link className={styles.link}>My classes</Link>

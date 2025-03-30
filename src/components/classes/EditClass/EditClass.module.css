@@ -1,6 +1,10 @@
 .edit .modall_edit {
     position: relative;
     box-shadow: 0 2px 8px rgba(51, 102, 153, 0.25);
+    z-index: 0;
+    width: auto;
+    left: auto;
+    padding: 2em;
 }
 
 .edit_class *,
@@ -40,4 +44,9 @@
 
 .form .span {
     color: #369;
+}
+
+.form .actions {
+    margin-top: 0;
+    margin: 2em 0;
 }

@@ -1,6 +1,10 @@
 .create .modall_create {
     position: relative;
     box-shadow: 0 2px 8px rgba(51, 102, 153, 0.25);
+    z-index: 0;
+    width: auto;
+    left: auto;
+    padding: 2em;
 }
 
 .create_class *,
@@ -24,15 +28,24 @@
     color: #fff;
 }
 
-.form {
+.create_class .form_group {
+    width: 100%;
+}
+
+.form,
+.form_p {
     font-size: 1.1em;
+}
+
+.form_p {
+    margin-bottom: 0;
 }
 
 .form_row {
     margin-bottom: 1.5rem;
 }
 
-.form .required::after {
+.form_p .required::after {
     content: '*';
     color: red;
     margin-left: 0.3rem;
@@ -40,4 +53,13 @@
 
 .form .span {
     color: #369;
+}
+
+.form .actions {
+    margin-top: 0;
+    margin: 2em 0;
+}
+
+.form .cancel_btn {
+    margin-right: 0 !important;
 }

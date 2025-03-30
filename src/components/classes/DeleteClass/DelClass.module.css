@@ -1,3 +1,7 @@
+.del .modall_delete {
+    width: auto;
+}
+
 .del_container h2 {
     color: #369;
 }

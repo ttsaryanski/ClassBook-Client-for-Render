@@ -1,38 +1,47 @@
 .edit .modall_edit {
     position: relative;
     box-shadow: 0 2px 8px rgba(51, 102, 153, 0.25);
+    z-index: 0;
+    width: auto;
+    left: auto;
+    padding: 2em;
 }
 
-.edit_class *,
-.edit_class .icon {
+.edit_student *,
+.edit_student .icon {
     color: #369;
 }
 
-.edit_class button {
+.edit_student button {
     color: #fff;
 }
 
-.edit_class option {
+.edit_student option {
     color: rgb(10, 65, 120)
 }
 
-.edit_class .edit_btn {
+.edit_student .edit_btn {
     background-color: #369;
 }
 
-.edit_class .cancel_btn {
+.edit_student .cancel_btn {
     color: #fff;
 }
 
-.form {
+.form,
+.form_p {
     font-size: 1.1em;
+}
+
+.form_p {
+    margin-bottom: 0;
 }
 
 .form_row {
     margin-bottom: 1.5rem;
 }
 
-.form .required::after {
+.form_p .required::after {
     content: '*';
     color: red;
     margin-left: 0.3rem;
@@ -40,4 +49,17 @@
 
 .form .span {
     color: #369;
+}
+
+.edit_student .form .form_group {
+    width: 100%;
+}
+
+.edit .form .actions {
+    margin-top: 0;
+    margin: 2em 0;
+}
+
+.edit .modall_edit .form .cancel_btn {
+    margin-right: 0 !important;
 }

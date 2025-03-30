@@ -1,6 +1,10 @@
 .details .modall_details {
     position: relative;
     box-shadow: 0 2px 8px rgba(51, 102, 153, 0.25);
+    z-index: 0;
+    width: auto;
+    left: auto;
+    padding: 2em;
 }
 
 .details_class * {

@@ -1,9 +1,16 @@
-.page404 .page404_main {
+.pageHelp {
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 0.5em;
+    box-shadow: 0 0 7px rgba(51, 102, 153, 0.5);
+}
+
+.pageHelp .pageHelp_main {
     background-color: transparent !important;
     color: #369;
 }
 
-.logo404 {
+.logoHelp {
     color: #369;
     font-size: 5em;
 }
@@ -21,10 +28,16 @@
     font-size: 1.5em;
 }
 
-.page404 .link {
+.pageHelp .link {
     text-decoration: none;
 }
 
 .button:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .pageHelp {
+        font-size: 10px;
+    }
 }

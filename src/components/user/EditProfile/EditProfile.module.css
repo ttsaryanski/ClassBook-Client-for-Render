@@ -1,6 +1,10 @@
 .edit .modall_edit {
     position: relative;
     box-shadow: 0 2px 8px rgba(51, 102, 153, 0.25);
+    z-index: 0;
+    width: auto;
+    left: auto;
+    padding: 2em;
 }
 
 .edit_user {
@@ -15,25 +19,30 @@
     color: #369;
 }
 
-.form_group {
+.edit_user .form_group {
     width: 100%;
 }
 
-.form {
+.form,
+.form_p {
     font-size: 1.1em;
+}
+
+.form_p {
+    margin-bottom: 0;
 }
 
 .form_row {
     margin-bottom: 1.5rem;
 }
 
-.form .required::after {
+.form_p .required::after {
     content: '*';
     color: red;
     margin-left: 0.3rem;
 }
 
-.form .span {
+.form_p .span {
     color: #369;
 }
 
@@ -47,4 +56,13 @@
 
 .custom_file_label::after {
     color: #369;
+}
+
+.edit .form .actions {
+    margin-top: 0;
+    margin: 2em 0;
+}
+
+.edit .modall_edit .form .btn_cancel {
+    margin-right: 0 !important;
 }

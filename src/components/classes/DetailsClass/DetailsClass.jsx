@@ -89,7 +89,7 @@ export default function DetailsClass() {
             <div className={`${styles.modall_details} modall`}>
                 <div className={`${styles.details_class} detail-container`}>
                     <header className="headers">
-                        <h2>{`Class ${clss.title} Detail`}</h2>
+                        <h2>{`Class ${clss.title} Details`}</h2>
                     </header>
                     <div className="content">
                         <div className={`${styles.user_details} user-details`}>

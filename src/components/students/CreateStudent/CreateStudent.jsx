@@ -101,116 +101,106 @@ export default function CreateStudents() {
                         <h2 className={styles.h2}>Add Student</h2>
                     </header>
                     <form onSubmit={submitHandler} className={styles.form}>
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label
-                                    htmlFor="firstName"
-                                    className={styles.required}
-                                >
-                                    First name
-                                </label>
-                                <div className="input-wrapper">
-                                    <div className="mt-2">
-                                        <div className="flex">
-                                            <span>
-                                                <i
-                                                    className={`${styles.icon} fa-solid fa-user`}
-                                                ></i>
-                                            </span>
-                                            <input
-                                                type="text"
-                                                id="firstName"
-                                                name="firstName"
-                                                value={firstName}
-                                                placeholder="John"
-                                                onChange={
-                                                    firstNameChangeHandler
-                                                }
-                                            />
-                                        </div>
-                                        {errors.firstName && (
-                                            <p className="text-danger midlle mt-1">
-                                                {errors.firstName}
-                                            </p>
-                                        )}
+                        <div className={`${styles.form_group} form-group`}>
+                            <label
+                                htmlFor="firstName"
+                                className={styles.required}
+                            >
+                                First name
+                            </label>
+                            <div className="input-wrapper">
+                                <div className={`${styles.form_group} mt-2`}>
+                                    <div className="flex">
+                                        <span>
+                                            <i
+                                                className={`${styles.icon} fa-solid fa-user`}
+                                            ></i>
+                                        </span>
+                                        <input
+                                            type="text"
+                                            id="firstName"
+                                            name="firstName"
+                                            value={firstName}
+                                            placeholder="John"
+                                            onChange={firstNameChangeHandler}
+                                        />
                                     </div>
+                                    {errors.firstName && (
+                                        <p className="text-danger midlle mt-1">
+                                            {errors.firstName}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         </div>
 
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label
-                                    htmlFor="lastName"
-                                    className={styles.required}
-                                >
-                                    Last name
-                                </label>
-                                <div className="input-wrapper">
-                                    <div className="mt-2">
-                                        <div className="flex">
-                                            <span>
-                                                <i
-                                                    className={`${styles.icon} fa-solid fa-user`}
-                                                ></i>
-                                            </span>
-                                            <input
-                                                type="text"
-                                                id="lastName"
-                                                name="lastName"
-                                                value={lastName}
-                                                placeholder="Doe"
-                                                onChange={lastNameChangeHandler}
-                                            />
-                                        </div>
-                                        {errors.lastName && (
-                                            <p className="text-danger midlle mt-1">
-                                                {errors.lastName}
-                                            </p>
-                                        )}
+                        <div className={`${styles.form_group} form-group`}>
+                            <label
+                                htmlFor="lastName"
+                                className={styles.required}
+                            >
+                                Last name
+                            </label>
+                            <div className="input-wrapper">
+                                <div className={`${styles.form_group} mt-2`}>
+                                    <div className="flex">
+                                        <span>
+                                            <i
+                                                className={`${styles.icon} fa-solid fa-user`}
+                                            ></i>
+                                        </span>
+                                        <input
+                                            type="text"
+                                            id="lastName"
+                                            name="lastName"
+                                            value={lastName}
+                                            placeholder="Doe"
+                                            onChange={lastNameChangeHandler}
+                                        />
                                     </div>
+                                    {errors.lastName && (
+                                        <p className="text-danger midlle mt-1">
+                                            {errors.lastName}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         </div>
 
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label
-                                    htmlFor="identifier"
-                                    className={styles.required}
-                                >
-                                    Identifier
-                                </label>
-                                <div className="input-wrapper">
-                                    <div className="mt-2">
-                                        <div className="flex">
-                                            <span>
-                                                <i
-                                                    className={`${styles.icon} fa-solid fa-shield`}
-                                                ></i>
-                                            </span>
-                                            <input
-                                                type="text"
-                                                id="identifier"
-                                                name="identifier"
-                                                value={identifier}
-                                                placeholder="9901011001"
-                                                onChange={
-                                                    identifierChangeHandler
-                                                }
-                                            />
-                                        </div>
-                                        {errors.identifier && (
-                                            <p className="text-danger midlle mt-1">
-                                                {errors.identifier}
-                                            </p>
-                                        )}
+                        <div className={`${styles.form_group} form-group`}>
+                            <label
+                                htmlFor="identifier"
+                                className={styles.required}
+                            >
+                                Identifier
+                            </label>
+                            <div className="input-wrapper">
+                                <div className={`${styles.form_group} mt-2`}>
+                                    <div className="flex">
+                                        <span>
+                                            <i
+                                                className={`${styles.icon} fa-solid fa-shield`}
+                                            ></i>
+                                        </span>
+                                        <input
+                                            type="text"
+                                            id="identifier"
+                                            name="identifier"
+                                            value={identifier}
+                                            placeholder="9901011001"
+                                            onChange={identifierChangeHandler}
+                                        />
                                     </div>
+                                    {errors.identifier && (
+                                        <p className="text-danger midlle mt-1">
+                                            {errors.identifier}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         </div>
 
-                        <div id="form-actions">
+                        <div id="form-actions" className={styles.actions}>
                             <button
                                 id="action-save"
                                 type="submit"
@@ -238,7 +228,7 @@ export default function CreateStudents() {
                             </Link>
                         </div>
                     </form>
-                    <p className={styles.form}>
+                    <p className={styles.form_p}>
                         {" "}
                         All fields marked with
                         <span className={styles.required}></span> are required!
