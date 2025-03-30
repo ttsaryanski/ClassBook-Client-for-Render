@@ -26,6 +26,7 @@ import CreateStudents from "./components/students/CreateStudent/CreateStudent";
 import StudentGrades from "./components/students/StudentGrades/StudentGrades";
 import Contacts from "./components/contacts/Contacts";
 import ErrorMsg from "./components/core/errorComponent/ErrorMsg";
+import Help from "./components/Help/Help";
 import Page404 from "./components/page 404/Page404";
 import UnderConstruction from "./components/underConstruction/UnderConstruction";
 
@@ -118,6 +119,8 @@ function App() {
                                             element={<Clss />}
                                         />
                                     </Route>
+
+                                    <Route path="/help" element={<Help />} />
 
                                     <Route
                                         path="/underconstruction"
