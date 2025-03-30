@@ -41,8 +41,7 @@ export default function DetailsClass() {
                         if (!signal.aborted) {
                             setError((prev) => [
                                 ...(prev || []),
-                                `Error fetching teacher:,
-                                ${error.message || "Unknown error"}`,
+                                `Error fetching teacher: ${error.message}`,
                             ]);
                         }
                     }
@@ -62,8 +61,7 @@ export default function DetailsClass() {
                         if (!signal.aborted) {
                             setError((prev) => [
                                 ...(prev || []),
-                                `Error fetching students:,
-                                ${error.message || "Unknown error"}`,
+                                `Error fetching students: ${error.message}`,
                             ]);
                         }
                     }
@@ -74,8 +72,7 @@ export default function DetailsClass() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching class:,
-                        ${error.message || "Unknown error"}`,
+                        `Error fetching class: ${error.message}`,
                     ]);
                 }
             }

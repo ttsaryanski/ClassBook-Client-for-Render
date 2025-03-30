@@ -35,10 +35,7 @@ export default function OneClass({
                 setTeacherData(dataTeacher);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError(
-                        "Error fetching teacher:",
-                        error.message || "Unknown error"
-                    );
+                    setError(`Error fetching teacher: ${error.message}`);
                 }
             }
         };

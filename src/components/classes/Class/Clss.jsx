@@ -45,7 +45,7 @@ export default function Clss() {
                 setIsLoading(false);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError("Error fetching classes.", error.message);
+                    setError(error.message);
                 }
             }
         };

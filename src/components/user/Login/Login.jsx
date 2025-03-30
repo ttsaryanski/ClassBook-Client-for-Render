@@ -18,6 +18,22 @@ export default function Login() {
         password: "",
     });
 
+    const submitHandler = async (e) => {
+        e.preventDefault();
+
+        setPending(true);
+        setError(null);
+        try {
+            await login(email, password);
+            clearForm();
+        } catch (error) {
+            setError(`Login failed: ${error.message}`);
+            setPassword("");
+        } finally {
+            setPending(false);
+        }
+    };
+
     const clearForm = () => {
         setEmail("");
         setPassword("");
@@ -34,22 +50,6 @@ export default function Login() {
             return "Password must be at least 6 characters long.";
         }
         return "";
-    };
-
-    const submitHandler = async (e) => {
-        e.preventDefault();
-
-        setPending(true);
-        setError(null);
-        try {
-            await login(email, password);
-            clearForm();
-        } catch (error) {
-            setError(error.message);
-            setPassword("");
-        } finally {
-            setPending(false);
-        }
     };
 
     const emailChangeHandler = (e) => {

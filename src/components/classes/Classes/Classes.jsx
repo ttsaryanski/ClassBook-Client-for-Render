@@ -38,7 +38,7 @@ export default function Classes() {
                 setIsLoading(false);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError("Error fetching classes.", error.message);
+                    setError(error.message);
                 }
             }
         };
@@ -48,14 +48,6 @@ export default function Classes() {
             abortController.abort();
         };
     }, [setError]);
-
-    const showDeleteClass = (clssId) => {
-        setShowDelClassById(clssId);
-    };
-
-    const closeDeleteClass = () => {
-        setShowDelClassById(null);
-    };
 
     const deleteClass = async () => {
         if (pending) {
@@ -109,12 +101,19 @@ export default function Classes() {
         } catch (error) {
             setError((prev) => [
                 ...(prev || []),
-                `Error deleting class: ,
-                ${error.message || "Unknown error"}`,
+                `Failded delete this klass: ${error.message}`,
             ]);
         } finally {
             setPending(false);
         }
+    };
+
+    const showDeleteClass = (clssId) => {
+        setShowDelClassById(clssId);
+    };
+
+    const closeDeleteClass = () => {
+        setShowDelClassById(null);
     };
 
     return (

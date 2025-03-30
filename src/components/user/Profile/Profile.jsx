@@ -50,8 +50,7 @@ export default function Profile() {
                 } catch (error) {
                     if (!signal.aborted) {
                         setError(
-                            "Failed to load teacher data: ",
-                            error.message
+                            `Failed to load teacher data: ${error.message}`
                         );
                     }
                 }

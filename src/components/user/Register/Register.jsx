@@ -50,7 +50,7 @@ export default function Register() {
             await login(email, password);
             clearForm();
         } catch (error) {
-            setError("Registration failed.", error.message);
+            setError(`Registration failed: ${error.message}`);
             setPassword("");
             setRePassword("");
         } finally {

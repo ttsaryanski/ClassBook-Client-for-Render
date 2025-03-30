@@ -41,8 +41,7 @@ export default function EditStudent() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching student: ,
-                        ${error.message || "Unknown error"}`,
+                        `Error fetching student: ${error.message}`,
                     ]);
                 }
             }
@@ -59,8 +58,7 @@ export default function EditStudent() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching class: ,
-                                ${error.message || "Unknown error"}`,
+                        `Error fetching class: ${error.message}`,
                     ]);
                 }
             }
@@ -96,7 +94,7 @@ export default function EditStudent() {
             await studentService.editById(studentId, updatedStudent);
             navigate(`/class/${clssId}`);
         } catch (error) {
-            setError("Add grade failed.", error.message);
+            setError(`Add grade failed: ${error.message}`);
         } finally {
             setPending(false);
         }

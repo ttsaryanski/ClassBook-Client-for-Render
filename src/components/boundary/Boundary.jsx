@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 import styles from "./Boundary.module.css";
 
 export default function Boundary() {

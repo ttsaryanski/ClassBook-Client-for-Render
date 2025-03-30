@@ -61,8 +61,7 @@ export default function EditProfile() {
                 } catch (error) {
                     if (!signal.aborted) {
                         setError(
-                            "Failed to load teacher data: ",
-                            error.message
+                            `Failed to load teacher data: ${error.message}`
                         );
                     }
                 }
@@ -100,8 +99,7 @@ export default function EditProfile() {
                 } catch (error) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error editing teacher data.,
-                            ${error.message || "Unknown error"}`,
+                        `Error editing teacher data: ${error.message}`,
                     ]);
                 }
             }
@@ -111,8 +109,7 @@ export default function EditProfile() {
         } catch (error) {
             setError((prev) => [
                 ...(prev || []),
-                `Error editing data.,
-                    ${error.message || "Unknown error"}`,
+                `Error editing user data: ${error.message}`,
             ]);
         } finally {
             setPending(false);

@@ -43,8 +43,7 @@ export default function CreateClass() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching teacher:,
-                        ${error.message || "Unknown error"}`,
+                        `Error fetching teacher: ${error.message}`,
                     ]);
                 }
             }
@@ -58,8 +57,7 @@ export default function CreateClass() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching students:,
-                        ${error.message || "Unknown error"}`,
+                        `Error fetching students: ${error.message}`,
                     ]);
                 }
             }
@@ -92,10 +90,7 @@ export default function CreateClass() {
                 setSelectedTeacher(dataTeacher);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError(
-                        "Error fetching teacher:",
-                        error.message || "Unknown error"
-                    );
+                    setError(`Error fetching teacher: ${error.message}`);
                 }
             }
         };
@@ -126,10 +121,7 @@ export default function CreateClass() {
                 setSelectedStudents(studentsData);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError(
-                        "Error fetching students:",
-                        error.message || "Unknown error"
-                    );
+                    setError(`Error fetching students: ${error.message}`);
                 }
             }
         };
@@ -178,7 +170,7 @@ export default function CreateClass() {
         } catch (error) {
             setError((prev) => [
                 ...(prev || []),
-                `Create class failed: ${error.message || "Unknown error"}`,
+                `Create class failed: ${error.message}`,
             ]);
         } finally {
             setPending(false);

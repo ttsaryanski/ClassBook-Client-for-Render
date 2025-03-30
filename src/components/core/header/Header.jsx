@@ -46,7 +46,10 @@ export default function Header() {
                     }
                 } catch (error) {
                     if (!signal.aborted) {
-                        setError("Error fetching teacher data:", error.message);
+                        setError((prev) => [
+                            ...(prev || []),
+                            `Error fetching teacher data: ${error.message}`,
+                        ]);
                     }
                     setIsTeacher(false);
                     setMyClasses([]);
@@ -74,10 +77,10 @@ export default function Header() {
                     }
                 } catch (error) {
                     if (!signal.aborted) {
-                        setError(
-                            "Error fetching students data:",
-                            error.message
-                        );
+                        setError((prev) => [
+                            ...(prev || []),
+                            `Error fetching students data: ${error.message}`,
+                        ]);
                     }
                     setIsStudent(false);
                     setStudent({});

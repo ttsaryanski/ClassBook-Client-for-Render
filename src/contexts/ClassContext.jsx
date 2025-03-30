@@ -16,7 +16,7 @@ export function ClassProvider({ children }) {
             const dataClass = await clssService.getAll();
             setClss(dataClass);
         } catch (error) {
-            setError("Error fetching classes:", error.message);
+            setError(`Error fetching classes: ${error.message}`);
         }
 
         return () => abortController.abort();

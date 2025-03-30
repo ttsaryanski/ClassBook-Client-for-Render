@@ -31,7 +31,7 @@ export default function Students() {
                 setIsLoading(false);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError("Error fetching classes.", error.message);
+                    setError(`Error fetching classes: ${error.message}`);
                 }
             }
         };

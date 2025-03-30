@@ -15,7 +15,7 @@ export default function Student({ clssId, student, isEditor }) {
                 ) || [];
             setClassGrades(filteredGrades);
         } catch (error) {
-            setError("Error processing grades", error.message);
+            setError(`Error processing grades: ${error.message}`);
         }
     }, [student.grades, clssId, setError]);
 

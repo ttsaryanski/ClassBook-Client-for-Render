@@ -52,8 +52,7 @@ export default function EditClass() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching classes: ,
-                        ${error.message || "Unknown error"}`,
+                        `Error fetching classes: ${error.message}`,
                     ]);
                 }
             }
@@ -67,8 +66,7 @@ export default function EditClass() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching teachers:,
-                        ${error.message || "Unknown error"}`,
+                        `Error fetching teachers: ${error.message}`,
                     ]);
                 }
             }
@@ -82,8 +80,7 @@ export default function EditClass() {
                 if (!signal.aborted) {
                     setError((prev) => [
                         ...(prev || []),
-                        `Error fetching students:,
-                        ${error.message || "Unknown error"}`,
+                        `Error fetching students: ${error.message}`,
                     ]);
                 }
             }
@@ -117,10 +114,7 @@ export default function EditClass() {
                 setSelectedTeacher(dataTeacher);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError(
-                        "Error fetching teachers:",
-                        error.message || "Unknown error"
-                    );
+                    setError(`Error fetching teachers: ${error.message}`);
                 }
             }
         };
@@ -151,10 +145,7 @@ export default function EditClass() {
                 setSelectedStudents(studentsData);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError(
-                        "Error fetching students:",
-                        error.message || "Unknown error"
-                    );
+                    setError(`Error fetching students: ${error.message}`);
                 }
             }
         };
@@ -224,7 +215,7 @@ export default function EditClass() {
         } catch (error) {
             setError((prev) => [
                 ...(prev || []),
-                `Edit class failed: ${error.message || "Unknown error"}`,
+                `Edit class failed: ${error.message}`,
             ]);
         } finally {
             setPending(false);

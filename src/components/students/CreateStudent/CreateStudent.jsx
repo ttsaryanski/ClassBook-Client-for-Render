@@ -31,7 +31,7 @@ export default function CreateStudents() {
             await studentService.createNew({ firstName, lastName, identifier });
             navigate("/students");
         } catch (error) {
-            setError("Create student failed.", error.message);
+            setError(`Create student failed: ${error.message}`);
         } finally {
             setPending(false);
         }

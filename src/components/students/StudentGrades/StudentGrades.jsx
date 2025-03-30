@@ -46,7 +46,7 @@ export default function StudentGrades() {
 
                 Object.keys(gradesByClass).forEach((classTitle) => {
                     gradesByClass[classTitle].sort(
-                        (a, b) => new Date(b.date) - new Date(a.date) // Най-новите първи
+                        (a, b) => new Date(b.date) - new Date(a.date)
                     );
                 });
 
@@ -54,7 +54,7 @@ export default function StudentGrades() {
                 setIsLoading(false);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError("Error fetching student.", error.message);
+                    setError(`Error fetching student: ${error.message}`);
                 }
             } finally {
                 setIsLoading(false);

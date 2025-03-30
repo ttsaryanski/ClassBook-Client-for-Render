@@ -25,10 +25,7 @@ export default function ShowDeleteClass({ classId, onDelete, onClose }) {
                 setClss(clssResult);
             } catch (error) {
                 if (!signal.aborted) {
-                    setError(
-                        "Error fetching class: ",
-                        error.message || "Unknown error"
-                    );
+                    setError(`Error fetching class: ${error.message}`);
                     onClose();
                 }
             }
