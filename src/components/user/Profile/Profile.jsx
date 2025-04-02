@@ -65,7 +65,7 @@ export default function Profile() {
     }, [user, setError]);
 
     return (
-        <>
+        <div className={styles.profile}>
             <div className={`${styles.details} detail-container`}>
                 <header className={`${styles.headers} headers`}>
                     <h2>User Detail</h2>
@@ -128,6 +128,6 @@ export default function Profile() {
                     Edit
                 </Link>
             </div>
-        </>
+        </div>
     );
 }
