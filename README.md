@@ -1,7 +1,3 @@
-# ClassBook - [Live App](https://classbook-react-project.web.app/classes) - Firebase
-
-⚠️ **Note:** The Rest API is hosted on a free-tier service and may take some time to wake up after a period of inactivity. Please be patient when making the first request.
-
 # ClassBook - [Live App](https://classbook-client-for-render.onrender.com) - Render
 
 ⚠️ **Note:** The Rest API is hosted on a free-tier service and may take up to **50 seconds to wake up** after a period of inactivity. Please be patient when making the first request.
@@ -98,4 +94,4 @@ Public Section is accessible to all users and includes:
 
 -   📌**Using a Cloud File Storage API**: Use AWS for uploading files, such as profile pictures.
 -   📌**Connecting to an External API**: The contact page integrates a map with location using Google Maps.
--   📌**Deploying the application in the cloud**: The application is deployed on Firebase and Render.
+-   📌**Deploying the application in the cloud**: The application is deployed on Render.
