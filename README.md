@@ -1,80 +1,38 @@
-# Tsvetan Tsaryanski exam project for React February 2025 course in SoftUni
+# ClassBook - [Live App](https://classbook-react-project.web.app/classes) - Firebase
 
-## Project Setup and Start Guide
+⚠️ **Note:** The Rest API is hosted on a free-tier service and may take some time to wake up after a period of inactivity. Please be patient when making the first request.
 
-This guide explains how to install dependencies and start both the server and the client of the project.
+# ClassBook - [Live App](https://classbook-client-for-render.onrender.com) - Render
 
-### Installation and start the server
-
-1.  Install dependencies for the REST API server:
-
-    Open Terminal, navigate and install:
-
-    -   cd Rest API
-    -   npm install
-
-2.  Environment Variables Configuration
-
-    -   **If use local database (e.g., MongoDB Compass) then `CLOUD_DB_URL` you won't need this!!!**
-    -   **If you are not going to use the upload functionality from local storage then `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY` you won't need them!!!**
-
-    To run this server, you need to set up the following environment variables in a `.env` file located in the root of the server. Here's a brief explanation of each variable:
-
-    -   JWT_SECRET: A secret key used for signing JSON Web Tokens (JWT). This should be a strong, random string.  
-         Example: `your_super_secret_key`
-
-    -   CLOUD_DB_URL: The connection string to your cloud database (e.g., MongoDB Atlas). You can use a test database URL if running in a development environment.  
-         Example: `mongodb+srv://username:password@cluster0.mongodb.net/dbname`
-
-    -   AWS_ACCESS_KEY: Your AWS Access Key for interacting with AWS services (e.g., S3 for file storage). You can obtain this from your AWS account.
-
-    -   AWS_SECRET_ACCESS_KEY: Your AWS Secret Key, paired with the AWS Access Key. This is also generated in your AWS account.
-
-    Steps to Set Up the `.env` File:
-
-    -   Create a file named `.env` in the root directory of the server.
-    -   Add the required environment variables in the following format:
-
-        -   JWT_SECRET = <your-jwt-secret>
-        -   CLOUD_DB_URL = <your-cloud-database-url>
-        -   AWS_ACCESS_KEY = <your-aws-access-key>
-        -   AWS_SECRET_ACCESS_KEY = <your-aws-secret-access-key>
-
-    -   Save the file.
-
-3.  Start the REST API Server:
-
-    -   npm start
-
-If everything is normal you will see the following messages:
-
-    Server running on http://localhost:3000
-    Successfully connect to local(cloud) DB!
-
-### Installation and start the client
-
-1.  Install dependencies for the client (SPA):
-
-    Open Terminal, navigate and install:
-
-    -   cd client
-    -   npm install
-
-2.  Start the Application:
-
-    -   npm start
-
-The SPA will typically be available at http://localhost:5173.
-
-Ensure the Rets API server is running before starting the SPA to enable proper integration.
-
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-
-# Cooking Together - [към приложението](https://test-client-hgl0.onrender.com)
+⚠️ **Note:** The Rest API is hosted on a free-tier service and may take up to **50 seconds to wake up** after a period of inactivity. Please be patient when making the first request.
 
 ## Project Overview
 
-Това е едностранично приложение (Single Page Application), имащо за цел да колекционира и предоставя на своите потребители готварски рецепти. Проектът включва публична и частна част, като спазва зададените изисквания. В приложението демонстрирам динамични функционалности, интеракция с REST API и използването на основни концепции и технологии на Angular.
+This is a Single Page Application (SPA) designed to serve as a school diary. The project includes both public and private sections, following the required specifications. The app demonstrates dynamic functionalities, interaction with the REST API, and the use of core concepts and technologies in React.
+
+⚠️ How to Use the School Diary App:
+
+-   📌Guest Users
+
+    -   Guests can view general school information, available classes, student count per class, and a full list of students.
+
+-   📌Students
+
+    -   During registration, students must enter their 10-digit ID (personal identification number) to link their account to an existing student record. They can then access their personal gradebook.
+
+    -   You can log in as a student using "`student@gmail.com`" with the password "`student`". ⚠️Only Live App!
+
+-   📌Teachers
+
+    -   Teachers register using a "`teacher_secret_key`". After registration, they should update their profile with their subject specialty. They can view their assigned classes and manage student grades with comments.
+
+    -   You can log in as a teacher using "`teacher@gmail.com`" with the password "`teacher`". ⚠️Only Live App!
+
+-   📌Director
+
+    -   The director registers using a "`director_secret_key`". They can add students, create and manage classes, assign teachers, and modify student enrollment.
+
+    -   You can log in as a director using "`director@gmail.com`" with the password "`director`". ⚠️Only Live App!
 
 ---
 
@@ -82,84 +40,62 @@ Ensure the Rets API server is running before starting the SPA to enable proper i
 
 ### Public Part
 
-Публичната част е достъпна за всички потребители и включва:
+Public Section is accessible to all users and includes:
 
--   **Начална страница**: Приветствие към посетителите и три от рецептите които са събрали най-много потребителски харесвания.
--   **Каталог**: Списък с всички налични рецепти, достъпни за разглеждане.
--   **Търсене**: Възможност за търсене по ключова дума или част от нея.
--   **Детайли**: Подробна информация за конкретена рецепта.
--   **Форми за автентикация**: Регистрация и вход в частната част на приложението предоставяща повече функционалност.
+-   📌**Home Pageа**: Brief introduction to the school.
+-   📌**Classes**: A page listing all existing classes along with their assigned teachers and the number of students in each class.
+-   📌**Students**: A page displaying a list of all registered students, showing their average grades.
+-   📌**Contacts**: A page with contact information for the school.
+-   📌**Help**: A help page that guides users in navigating and using the application.
+-   📌**Authentication Forms**: Registration and login forms to access the private part of the app, providing more functionalities.
 
 ### Private Part
 
-Частната част е достъпна само за регистрирани и вписани потребители и предоставя:
+⚠️ The private section is accessible only to registered users and includes:
 
--   **Управление на записи**: Създаване, редактиране и изтриване на собствени рецепти.
--   **Интеракция**: Възможност за поставяне на положителна оценка стига текущия потребител да не е неин автор.
--   **Потребителски профил**: Профила на потребителя включващ списък с добавените от него рецепти и списък с харесаните от него рецепти.
+-   📌**Personal Gradebook**: A page where students can view their grades, as well as receive comments from teachers.
+
+-   📌**Class Management**: Teachers can view and manage their assigned classes and adding student grades.
+
+-   📌**Student Management**: Directors can add new students, create, edit and delete classes, and assign teachers to the respective classes.
+
+-   📌**User Profile**: A page where each user can edit their personal information and update their profile (e.g., teachers can add their subject specialty).
 
 ---
 
 ## Technologies and Concepts
 
-### Основни технологии
+### Core Technologies
 
--   **Angular**: Основната рамка за клиентската част.
--   **REST API**: За комуникация с отдалечен сървър.
--   **TypeScript**: Строго типизиране и използване на интерфейси.
--   **RxJS**: Използване на наблюдения и оператори за реактивно програмиране.
--   **CSS**: За стил и визуална презентация.
+-   📌**React**: The main library for the client-side part.
+-   📌**REST API**: For communication with a remote server.
+-   📌**JavaScript**: Used for dynamic interaction within the app.
+-   📌**CSS**: For styling and visual presentation.
 
-### Основни Angular концепции
+### Core React Concepts
 
--   **Роутинг**: Клиентски маршрути за различни.
--   **Интерфейси**: Дефинирани са повече от 2 интерфейса за типизиране.
--   **Lifecycle Hooks**: Използвани са специфични lifecycle hooks за управление на компонентите.
--   **RxJS Operators**: Използвани са повече от 2 оператора за обработка на данни.
--   **Pipes**: Използвани са за форматиране на данни.
--   **Route Guards**: За защита на публичната и частната част.
+-   📌**Routing**: React Router is used to manage client-side routing for different pages.
+-   📌**Component State**: useState and useReducer are used for managing state within components.
+-   📌**React Hooks**: Various hooks like useEffect, useContext are used to manage component behavior and state.
+-   📌**Context API**: Used to share state across components without passing props.
+-   📌**React Router Guards**: Used to protect both public and private sections of the app (e.g., authentication checks).
+-   📌**Styling**: External CSS files are used for styling the components.
 
-### Функционалности
+### Core Features
 
--   **CRUD Операции**: Пълна поддръжка на създаване, четене, редактиране и изтриване на рецепти.
--   **Валидация на данни**: Клиентска валидация за предотвратяване на грешки.
--   **Обработка на грешки**: Управление на грешки при комуникация с API.
--   **Автоматично оставане вписан**: Потребителите остават вписани след презареждане на страницата.
+-   📌**CRUD Operations**: Full support for creating, reading, updating, and deleting records (e.g., classes, students, and grades).
+-   📌**Data Validation**: Client-side validation to prevent errors when entering data.
+-   📌**Error Handling**: Management of errors during communication with the REST API, displaying error messages for failed requests.
+-   📌**Stay Logged In**: Users remain logged in after a page reload using cookies.
 
 ---
 
 ## Folder Structure
 
-Приложението е организирано в добре дефинирана структура, която улеснява поддръжката и разширяването на проекта:
+-   📌The application follows a well-defined folder structure, which ensures maintainability and scalability of the project.
 
--   `/src/app` - Главната папка за Angular приложението.
+## Bonuses
 
-    -   `/authenticate` - Модул за автентикация.
-    -   `/core` - Основни компоненти в приложението: хедър, футър и компонент за извеждане на грешки.
-    -   `/directives` - Директиви за допълнителна логика.
-    -   `/home` - Компоненти за началната страница.
-    -   `/interceptors` - Интерсептори за обработка на HTTP заявки.
-    -   `/page404` - Компоненти за страница "404 - Не е намерено".
-    -   `/recipes` - Функционалности, свързани с управление на рецепти:
-        -   `/catalog` - Преглед на всички налични рецепти.
-        -   `/create` - Създаване на нови рецепти.
-        -   `/details` - Детайлен изглед на рецепта.
-        -   `/edit` - Редактиране на рецепти.
-        -   `/recipe` - Основна логика за отделна рецепта.
-        -   `/search` - Търсене на рецепти.
-        -   `recipes.service.ts` - Сервиз за работа с данните за рецепти.
-    -   `/shared` - Споделени модули и компоненти.
-    -   `/types` - Типове и интерфейси за TypeScript.
-    -   `/user` - Модули, свързани с потребителите:
-        -   `/login` - Компонент за вход.
-        -   `/profile` - Управление на потребителския профил.
-        -   `/register` - Компонент за регистрация.
-        -   `user.service.ts` - Сервиз за управление на данни за потребители.
-    -   `/utils` - Помощни функции като `setClasses.ts`.
-
--   `app.component.*` - Главният компонент на приложението.
--   `app.routes.ts` - Дефинирани маршрути за приложението.
--   `environments/` - Конфигурации за различни среди (production/development).
--   `index.html` - Основният HTML файл на приложението.
--   `main.ts` - Входната точка за Angular приложението.
--   `styles.css` - Глобални стилове.
+-   📌**Using a Cloud File Storage API**: Use AWS for uploading files, such as profile pictures.
+-   📌**Connecting to an External API**: The contact page integrates a map with location using Google Maps.
+-   📌**Deploying the application in the cloud**: The application is deployed on Firebase and Render.

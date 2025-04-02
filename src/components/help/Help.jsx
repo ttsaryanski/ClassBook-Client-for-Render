@@ -42,7 +42,8 @@ export default function Help() {
                             their personal gradebook.
                         </p>
                         <p className="text-gray-600 mt-2">
-                            You have the option to log in as a student using "{" "}
+                            <span style={{ color: "red" }}>*</span> You have the
+                            option to log in as a student using "{" "}
                             <span style={{ color: "red" }}>
                                 student@gmail.com
                             </span>{" "}
@@ -64,7 +65,8 @@ export default function Help() {
                             with comments.
                         </p>
                         <p className="text-gray-600 mt-2">
-                            You have the option to log in as a teacher using "{" "}
+                            <span style={{ color: "red" }}>*</span> You have the
+                            option to log in as a teacher using "{" "}
                             <span style={{ color: "red" }}>
                                 teacher@gmail.com
                             </span>{" "}
@@ -84,7 +86,8 @@ export default function Help() {
                             assign teachers, and modify student enrollment.
                         </p>
                         <p className="text-gray-600 mt-2">
-                            You have the option to log in as a director using "{" "}
+                            <span style={{ color: "red" }}>*</span> You have the
+                            option to log in as a director using "{" "}
                             <span style={{ color: "red" }}>
                                 director@gmail.com
                             </span>{" "}
@@ -92,6 +95,10 @@ export default function Help() {
                             <span style={{ color: "red" }}>director</span> "
                         </p>
                     </div>
+                    <p style={{ textAlign: "left", marginTop: "2em" }}>
+                        All marked with <span style={{ color: "red" }}>*</span>{" "}
+                        valid only for live demo!
+                    </p>
                 </div>
             </main>
         </div>
