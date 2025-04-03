@@ -38,7 +38,7 @@ This is a Single Page Application (SPA) designed to serve as a school diary. The
 
 Public Section is accessible to all users and includes:
 
--   📌**Home Pageа**: Brief introduction to the school.
+-   📌**Home Page**: Brief introduction to the school.
 -   📌**Classes**: A page listing all existing classes along with their assigned teachers and the number of students in each class.
 -   📌**Students**: A page displaying a list of all registered students, showing their average grades.
 -   📌**Contacts**: A page with contact information for the school.
